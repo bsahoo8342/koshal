@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- Remix Icons: https://remixicon.com/ -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Gallery</title>
+</head>
+<style>
+    .gallery-title {
+        font-size: 36px;
+        color: #005D9A;
+        text-align: center;
+        font-weight: 500;
+        margin-top: 25px;
+
+    }
+
+    .gallery-title::before {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 3px;
+        background-color: rgb(173, 129, 0);
+        bottom: 1px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: animate 4s linear infinite;
+
+        /* content: "";
+        position: absolute;
+        width: 7.5%;
+        left: 46.5%;
+        height: 45px;
+        border-bottom: 1px solid #5e5e5e; */
+    }
+
+    @keyframes animate {
+        0% {
+            width: 100px;
+        }
+
+        50% {
+            width: 200px;
+        }
+
+        100% {
+            width: 100px;
+        }
+    }
+
+    .filter-button {
+        font-size: 18px;
+        border: 1px solid #005D9A;
+        border-radius: 5px;
+        text-align: center;
+        color: #005D9A;
+        margin-top: 30px;
+
+    }
+
+    .filter-button:hover {
+        font-size: 18px;
+        border: 1px solid #005D9A;
+        border-radius: 5px;
+        text-align: center;
+        color: #ffffff;
+        background-color: rgb(173, 129, 0);
+
+    }
+
+    .btn-default:active .filter-button:active {
+        background-color: #42B32F;
+        color: white;
+    }
+
+    .port-image {
+        width: 100%;
+    }
+
+    .gallery_product {
+        margin-bottom: 30px;
+        border-radius: 5px;
+        box-shadow: 3px 3px 5px lightgray;
+    }
+
+    .col-lg-4 {
+        width: 25%;
+    }
+</style>
+
+<body>
+    <nav id='menu'>
+        <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label> Menu</label>
+        <ul>
+            <li><a href='index.html'>HOME</a></li>
+            <li><a href='about.html'>ABOUT US</a></li>
+            <li><a class='dropdown-arrow' href='#'>ACADEMIC</a>
+                <ul class='sub-menus'>
+                    <li><a href='#'>Admission</a></li>
+                    <li><a href='#'>Examination</a></li>
+                    <li><a href='#'>Fee Structure</a></li>
+                    <li><a href='#'>Faculties</a></li>
+                </ul>
+            </li>
+            <li><a class='dropdown-arrow' href='#'>FACILITIES</a>
+                <ul class='sub-menus'>
+                    <li><a href='#'>Infrastructure</a></li>
+                    <li><a href='#'>Transport Facilities</a></li>
+                    <!-- <li><a href='#'>Services 3</a></li> -->
+                </ul>
+            </li>
+            <li><a href='gallery.html'>GALLERY</a></li>
+            <li><a href='#'>NOTICES</a></li>
+
+            <li><a href='#'>CONTACT US</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h1 class="gallery-title">OUR PHOTO GALLERY</h1>
+            </div>
+
+            <div align="center">
+                <button class="btn btn-default filter-button" data-filter="all"><strong>All</strong></button>
+                <button class="btn btn-default filter-button" data-filter="hdpe"><strong>Birthday
+                        photos</strong></button>
+                <button class="btn btn-default filter-button" data-filter="sprinkle"><strong>sports</strong> </button>
+                <button class="btn btn-default filter-button" data-filter="spray"><strong>janmastami
+                        photos</strong></button>
+                <button class="btn btn-default filter-button" data-filter="irrigation"><strong>Teacher
+                        day</strong></button>
+                <button class="btn btn-default filter-button"
+                    data-filter="sprays"><strong>independence</strong></button>
+            </div>
+            <br /></strong>
+
+
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+                <img src="assets/Images/gallery/birthday.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprays">
+                <img src="assets/Images/gallery/indi1.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprays">
+                <img src="assets/Images/gallery/indi2.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
+                <img src="assets/Images/gallery/krishna1.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
+                <img src="assets/Images/gallery/krishna2.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
+                <img src="assets/Images/gallery/krishna3.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
+                <img src="assets/Images/gallery/krishna4.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
+                <img src="assets/Images/gallery/krishna5.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
+                <img src="assets/Images/gallery/krishna6.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
+                <img src="assets/Images/gallery/sport1.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
+                <img src="assets/Images/gallery/sport2.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
+                <img src="assets/Images/gallery/sport3.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
+                <img src="assets/Images/gallery/sport4.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
+                <img src="assets/Images/gallery/sport5.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+                <img src="assets/Images/gallery/teacher1.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+                <img src="assets/Images/gallery/teacher2.jpg" class="img-responsive">
+            </div>
+
+        </div>
+    </div>
+    </section>
+    <script>
+        $(document).ready(function () {
+
+            $(".filter-button").click(function () {
+                var value = $(this).attr('data-filter');
+
+                if (value == "all") {
+                    //$('.filter').removeClass('hidden');
+                    $('.filter').show('1000');
+                }
+                else {
+                    //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+                    //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+                    $(".filter").not('.' + value).hide('3000');
+                    $('.filter').filter('.' + value).show('3000');
+
+                }
+            });
+
+            if ($(".filter-button").removeClass("active")) {
+                $(this).removeClass("active");
+            }
+            $(this).addClass("active");
+
+        });
+    </script>
+</body>
+<footer class="mt-3" id="footer">
+    <div class="container">
+        <div class="row text-center text-xs-center text-sm-left text-md-left">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <h5>Quick links</h5>
+                <ul class="list-unstyled quick-links">
+                    <li><a href="#"><i class="ri-arrow-right-double-fill"></i></i>Home</a></li>
+                    <li><a href="about.html"><i class="ri-arrow-right-double-fill"></i></i>About Us</a></li>
+                    <li><a href="#"><i class="ri-arrow-right-double-fill"></i></i>Facilities</a></li>
+
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <h5>Quick links</h5>
+                <ul class="list-unstyled quick-links">
+                    <li><a href="#"><i class="ri-arrow-right-double-fill"></i></i>Terms & Conditions</a></li>
+                    <li><a href="#"><i class="ri-arrow-right-double-fill"></i></i>Privacy Policy</a></li>
+                    <li><a href="#"><i class="ri-arrow-right-double-fill"></i></i>Career</a></li>
+
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <h5>Quick links</h5>
+                <ul class="list-unstyled quick-links">
+                    <li><a href="#"><i class="ri-arrow-right-double-fill"></i></i>Contact Us</a></li>
+                    <li><a href="gallery.html"><i class="ri-arrow-right-double-fill"></i></i>Gallery</a></li>
+                    <li><a href="#"><i class="ri-arrow-right-double-fill"></i></i>Login</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                <ul class="list-unstyled list-inline social text-center">
+                    <li class="list-inline-item"><a href="#"><i class="ri-facebook-circle-fill"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="ri-twitter-x-fill"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="ri-instagram-line"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="ri-google-fill"></i></a></li>
+                    <li class="list-inline-item"><a href="#" target="_blank"><i class="ri-mail-send-fill"></i></a></li>
+                </ul>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+
+                <p class="h6">© 2024 KHOSAL PUBLIC SCHOOL<a class="text-green ml-2" href="https://www.sunlimetech.com"
+                        target="_blank"> | ALL RIGHTS RESERVED</a></p>
+
+            </div>
+            <hr>
+        </div>
+    </div>
+</footer>
+
+</html>
